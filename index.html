@@ -1,167 +1,505 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aura Wallpaper | Premium Wallpapers</title>
-    <meta name="description" content="Discover stunning high-resolution desktop and mobile wallpapers.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Learn With Vikas</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:
+    radial-gradient(circle at top,#1e293b 0%,#020617 70%);
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* CONTAINER */
+
+.container{
+    max-width:480px;
+    margin:auto;
+    padding:22px;
+    text-align:center;
+}
+
+/* TOP BADGE */
+
+.top-badge{
+    display:inline-block;
+    background:rgba(99,102,241,0.15);
+    border:1px solid rgba(129,140,248,0.4);
+    color:#c7d2fe;
+    padding:8px 16px;
+    border-radius:40px;
+    font-size:12px;
+    font-weight:600;
+    margin-top:10px;
+    backdrop-filter:blur(10px);
+}
+
+/* HERO */
+
+.hero{
+    margin-top:20px;
+    padding:28px 22px;
+    border-radius:28px;
+    background:linear-gradient(
+    145deg,
+    rgba(255,255,255,0.08),
+    rgba(255,255,255,0.03)
+    );
+    border:1px solid rgba(255,255,255,0.08);
+    box-shadow:
+    0 10px 40px rgba(0,0,0,0.4);
+    backdrop-filter:blur(16px);
+}
+
+/* LOGO */
+
+.logo{
+    width:110px;
+    height:110px;
+    border-radius:24px;
+    object-fit:cover;
+    border:3px solid rgba(255,255,255,0.1);
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* HEADING */
+
+h1{
+    margin-top:18px;
+    font-size:34px;
+    font-weight:700;
+    line-height:1.2;
+}
+
+.highlight{
+    background:linear-gradient(45deg,#818cf8,#22d3ee);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* SUBTEXT */
+
+.tagline{
+    margin-top:16px;
+    font-size:15px;
+    line-height:1.8;
+    color:#cbd5e1;
+}
+
+/* TRUST STATS */
+
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-top:22px;
+    flex-wrap:wrap;
+}
+
+.stat{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.08);
+    padding:10px 14px;
+    border-radius:14px;
+    min-width:110px;
+}
+
+.stat h3{
+    font-size:18px;
+    color:#fff;
+}
+
+.stat p{
+    font-size:11px;
+    color:#cbd5e1;
+    margin-top:2px;
+}
+
+/* CTA */
+
+.cta{
+    display:block;
+    width:100%;
+    padding:16px;
+    margin-top:24px;
+    border-radius:18px;
+    text-decoration:none;
+    font-size:17px;
+    font-weight:700;
+    color:white;
+    background:linear-gradient(45deg,#6366f1,#06b6d4);
+    box-shadow:
+    0 10px 25px rgba(99,102,241,0.4);
+    transition:0.3s ease;
+}
+
+.cta:hover{
+    transform:translateY(-2px);
+}
+
+.cta-note{
+    margin-top:12px;
+    font-size:12px;
+    color:#cbd5e1;
+}
+
+/* SECTION */
+
+.section-title{
+    margin-top:32px;
+    font-size:22px;
+    font-weight:700;
+    text-align:left;
+}
+
+/* FEATURES */
+
+.feature-grid{
+    margin-top:18px;
+    display:grid;
+    gap:14px;
+}
+
+.feature{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:18px;
+    padding:18px;
+    text-align:left;
+    backdrop-filter:blur(10px);
+}
+
+.feature h3{
+    font-size:16px;
+    margin-bottom:8px;
+}
+
+.feature p{
+    font-size:13px;
+    line-height:1.7;
+    color:#cbd5e1;
+}
+
+/* TESTIMONIAL */
+
+.testimonial{
+    margin-top:22px;
+    background:linear-gradient(
+    145deg,
+    rgba(99,102,241,0.12),
+    rgba(255,255,255,0.04)
+    );
+    border:1px solid rgba(255,255,255,0.08);
+    padding:18px;
+    border-radius:18px;
+    text-align:left;
+}
+
+.testimonial p{
+    font-size:14px;
+    line-height:1.8;
+    color:#e2e8f0;
+}
+
+.user{
+    margin-top:10px;
+    font-size:12px;
+    color:#93c5fd;
+}
+
+/* BONUS */
+
+.bonus{
+    margin-top:24px;
+    padding:18px;
+    border-radius:18px;
+    background:rgba(6,182,212,0.08);
+    border:1px solid rgba(34,211,238,0.15);
+}
+
+.bonus h3{
+    font-size:18px;
+}
+
+.bonus p{
+    margin-top:8px;
+    font-size:13px;
+    line-height:1.7;
+    color:#cbd5e1;
+}
+
+/* AGENCY */
+
+.agency{
+    margin-top:28px;
+    padding:18px;
+    border-radius:18px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.agency h3{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.agency p{
+    font-size:13px;
+    line-height:1.8;
+    color:#cbd5e1;
+}
+
+.agency a{
+    color:#93c5fd;
+    text-decoration:none;
+    font-weight:600;
+}
+
+/* FOOTER */
+
+.footer{
+    margin-top:35px;
+    padding-bottom:30px;
+    font-size:11px;
+    line-height:1.8;
+    color:#94a3b8;
+}
+
+.footer a{
+    color:#a5b4fc;
+    text-decoration:none;
+}
+
+.disclaimer{
+    margin-top:12px;
+    font-size:10px;
+    opacity:0.8;
+}
+
+</style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '850496297526813');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=850496297526813&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
 </head>
+
 <body>
-    <!-- Splash Screen -->
-    <div id="splashScreen" class="splash-screen" style="cursor: pointer;" title="Click to skip">
-        <div class="splash-content">
-            <img src="logo.png.png" alt="Logo" class="splash-logo">
-            <h1 class="splash-text">WELCOME TO AURA WALLPAPER</h1>
-            <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem; animation: splashFadeInUp 1s ease forwards 1s; opacity: 0;">Click anywhere to skip</p>
-        </div>
-    </div>
 
-    <!-- Eye Comfort Shield Overlay -->
-    <div id="eyeComfortOverlay" class="eye-comfort-overlay hidden"></div>
+<div class="container">
 
-    <!-- API Key Modal -->
-    <div id="apiKeyModal" class="modal-overlay hidden">
-        <div class="modal-content glass-effect">
-            <h2>Welcome to Aura Wallpaper</h2>
-            <p>To fetch breathtaking wallpapers, please enter your <a href="https://www.pexels.com/api/" target="_blank">Pexels API Key</a>.</p>
-            <div class="input-group">
-                <i class='bx bx-key'></i>
-                <input type="password" id="apiKeyInput" placeholder="Enter Pexels API Key...">
-            </div>
-            <button id="saveApiKeyBtn" class="primary-btn">Start Exploring</button>
-            <p class="modal-note">Your key is stored securely in your browser's local storage.</p>
-        </div>
-    </div>
+<div class="top-badge">
+🚀 India's Fast Growing Trading Learning Community
+</div>
 
-    <!-- Navigation -->
-    <nav class="navbar glass-effect">
-        <div class="nav-container">
-            <div class="logo">
-                <img src="logo.png.png" alt="Logo" style="height: 70px; width: 70px; object-fit: contain; filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));">
-                <span>Aura Wallpaper</span>
-            </div>
-            
-            <div class="search-bar">
-                <i class='bx bx-search'></i>
-                <input type="text" id="searchInput" placeholder="Search wallpapers (e.g. Cyberpunk, Nature)...">
-            </div>
+<div class="hero">
 
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="favorites.html" id="navFavorites" class="hidden">Favorites</a>
-                <a href="login.html" id="navLogin">Login</a>
-                <a href="signup.html" id="navSignup">Sign Up</a>
-                <a href="#" id="navLogout" class="hidden">Logout</a>
-            </div>
+<img src="https://market.smagency.in/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-20-at-11.17.20-AM.jpeg" class="logo">
 
-            <div class="nav-actions">
-                <div class="dropdown-container" style="position: relative;">
-                    <button id="settingsDropdownBtn" class="icon-btn" title="Menu" style="overflow: hidden; padding: 0;">
-                        <img id="navProfileImage" src="" alt="Profile" class="hidden" style="width: 100%; height: 100%; object-fit: cover;">
-                        <i id="navProfileIcon" class='bx bx-cog'></i>
-                    </button>
-                    <div id="settingsDropdown" class="dropdown-menu hidden glass-effect">
-                        <a href="profile.html" class="dropdown-item" id="dropdownProfileLink"><i class='bx bx-user'></i> Profile</a>
-                        <button id="themeToggleBtn" class="dropdown-item" style="background: none; border: none; width: 100%; text-align: left; cursor: pointer; font-family: inherit; font-size: inherit;">
-                            <i class='bx bx-moon'></i> Dark Mode
-                        </button>
-                        <button id="eyeComfortBtn" class="dropdown-item" style="background: none; border: none; width: 100%; text-align: left; cursor: pointer; font-family: inherit; font-size: inherit;">
-                            <i class='bx bxs-low-vision'></i> Eye Comfort
-                        </button>
-                        <a href="about.html" class="dropdown-item"><i class='bx bx-info-circle'></i> About Us</a>
-                        <a href="contact.html" class="dropdown-item"><i class='bx bx-envelope'></i> Contact Us</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
+<h1>
+Master The<span class="highlight"> Market</span><br>
+Step By Step 📈
+</h1>
 
-    <!-- Main Content -->
-    <main>
-        <header class="hero">
-            <h1 class="gradient-text">Elevate Your Screen.</h1>
-            <p>Curated high-resolution wallpapers for every device.</p>
-            
-            <div class="scroll-wrapper" style="position: relative; display: flex; align-items: center; justify-content: center; margin-top: 2rem; gap: 0.5rem; width: 100%;">
-                <button id="scrollLeftBtn" class="icon-btn scroll-arrow" style="background: var(--bg-secondary); border: 1px solid var(--glass-border); flex-shrink: 0; z-index: 2;"><i class='bx bx-chevron-left'></i></button>
-                
-                <div class="horizontal-scroll" id="categoryScroll" style="scroll-behavior: smooth;">
-                    <!-- Categories -->
-                    <button class="filter-btn category-btn" data-query="Gaming wallpaper">
-                        <i class='bx bx-joystick'></i> Gaming
-                    </button>
-                    <button class="filter-btn category-btn" data-query="Live wallpaper">
-                        <i class='bx bx-video'></i> Live
-                    </button>
-                    <button class="filter-btn category-btn" data-query="Aesthetic wallpaper">
-                        <i class='bx bx-palette'></i> Aesthetic
-                    </button>
+<p class="tagline">
+Learn how smart player read charts, manage risk &
+understand market psychology with easy-to-understand lessons.
+</p>
 
-                    <!-- Divider -->
-                    <div style="width: 1px; height: 30px; background: rgba(255,255,255,0.2); margin: auto 0.5rem; flex-shrink: 0;"></div>
+<div class="stats">
 
-                    <!-- Orientations -->
-                    <button class="filter-btn active" data-orientation="all">
-                        <i class='bx bx-grid-alt'></i> All
-                    </button>
-                    <button class="filter-btn" data-orientation="landscape">
-                        <i class='bx bx-desktop'></i> Desktop
-                    </button>
-                    <button class="filter-btn" data-orientation="portrait">
-                        <i class='bx bx-mobile-alt'></i> Mobile
-                    </button>
-                </div>
-                
-                <button id="scrollRightBtn" class="icon-btn scroll-arrow" style="background: var(--bg-secondary); border: 1px solid var(--glass-border); flex-shrink: 0; z-index: 2;"><i class='bx bx-chevron-right'></i></button>
-            </div>
-        </header>
+<div class="stat">
+<h3>10K+</h3>
+<p>Active Learners</p>
+</div>
 
-        <section class="gallery-container">
-            <div id="loadingIndicator" class="loading-indicator hidden">
-                <div class="spinner"></div>
-                <p>Curating pixels...</p>
-            </div>
-            
-            <div id="gallery" class="gallery">
-                <!-- Wallpaper cards will be injected here -->
-            </div>
-            
-            <div id="loadMoreContainer" class="load-more-container hidden">
-                <button id="loadMoreBtn" class="secondary-btn">
-                    <span>Load More</span>
-                    <i class='bx bx-down-arrow-alt'></i>
-                </button>
-            </div>
-        </section>
-    </main>
+<div class="stat">
+<h3>Daily</h3>
+<p>Market Learning</p>
+</div>
 
-    <!-- Fullscreen Image Modal -->
-    <div id="imageModal" class="modal-overlay hidden">
-        <button id="closeImageBtn" class="close-btn"><i class='bx bx-x'></i></button>
-        <div class="full-image-container">
-            <img id="fullImage" src="" alt="Full Resolution">
-            <video id="fullVideo" src="" controls autoplay loop playsinline class="hidden"></video>
-            <div class="image-actions glass-effect">
-                <div class="photographer-info">
-                    <i class='bx bxs-camera'></i>
-                    <span id="photographerName">Photographer</span>
-                </div>
-                <div class="action-buttons">
-                    <a id="downloadBtn" href="#" target="_blank" class="primary-btn download-btn">
-                        <i class='bx bx-download'></i> Download Original
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="stat">
+<h3>Free</h3>
+<p>Educational Access</p>
+</div>
 
-    <script src="auth.js"></script>
-    <script src="app.js"></script>
+</div>
+
+<a href="https://t.me/+CRcH0Yj3TSQ3ZjI1"
+class="cta track-subscribe">
+Join Free Telegram Channel 🚀
+</a>
+
+<p class="cta-note">
+⚡ Instant Access • Beginner Friendly • Free Learning
+</p>
+
+</div>
+
+<h2 class="section-title">
+What You'll Learn 👇
+</h2>
+
+<div class="feature-grid">
+
+<div class="feature">
+<h3>📊 Smart Chart Reading</h3>
+<p>
+Understand support resistance, trends, breakout setups and price action easily.
+</p>
+</div>
+
+<div class="feature">
+<h3>🛡️ Risk Management</h3>
+<p>
+Learn how experienced player protect capital and avoid emotional decisions.
+</p>
+</div>
+
+<div class="feature">
+<h3>📈 Educational  Setups</h3>
+<p>
+See real market examples for educational understanding and practical learning.
+</p>
+</div>
+
+<div class="feature">
+<h3>🧠 Beginner To Advanced Growth</h3>
+<p>
+Step-by-step educational content designed for both beginners and active players.
+</p>
+</div>
+
+</div>
+
+<div class="testimonial">
+
+<p>
+“Earlier I used to blindly follow random tips. After joining this learning community,
+I finally understood how the market actually works.”
+</p>
+
+<div class="user">
+— Community Member ⭐⭐⭐⭐⭐
+</div>
+
+</div>
+
+<div class="bonus">
+
+<h3>🎁 Free Bonus Resources</h3>
+
+<p>
+Get free educational PDFs, chart breakdowns, market psychology lessons
+and beginner-friendly trading insights regularly.
+</p>
+
+</div>
+
+<div class="agency">
+
+<h3>📢 Powered By ShriRam Media Agency</h3>
+
+<p>
+Digital Growth & Lead Generation Partner for your Brands.
+</p>
+
+<p style="margin-top:10px;">
+👉 <a href="https://t.me/+2L9idwqcixg2OTZl" target="_blank">
+Connect With ShriRam Media Agency
+</a>
+</p>
+
+</div>
+
+<a href="https://t.me/+CRcH0Yj3TSQ3ZjI1"
+class="cta track-subscribe">
+Start Learning Now 📈
+</a>
+
+<div class="footer">
+
+<p>
+<a href="https://smagency.in/privacy/">Privacy Policy</a> •
+<a href="https://smagency.in/terms/">Terms</a> •
+<a href="https://smagency.in/disclaimer/">Disclaimer</a>
+</p>
+
+<p class="disclaimer">
+This platform is strictly for educational purposes only and does not provide
+financial advice or guaranteed returns.
+</p>
+
+<p class="disclaimer">
+This website is not affiliated with Meta Platforms Inc.
+</p>
+
+<p class="disclaimer">
+Advertising & Promotions Managed By ShriRam Media Agency.
+</p>
+
+</div>
+
+</div>
+
+<!-- TRACKING -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+document.querySelectorAll('.track-subscribe').forEach(function(btn) {
+
+btn.addEventListener('click', function (e) {
+
+e.preventDefault();
+
+let link = this.href;
+
+fbq('track', 'Lead', {
+content_name: 'Telegram Lead',
+content_category: 'Finance Education'
+});
+
+setTimeout(function () {
+window.location.href = link;
+}, 300);
+
+});
+
+});
+
+});
+
+</script>
+
 </body>
 </html>
